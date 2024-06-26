@@ -1,15 +1,13 @@
 # CryptoApp 加密解密工具箱
 
-###### E-mail:cforth@cfxyz.com
-
-一个基于pycryptodome库实现的加密解密工具箱GUI程序，支持在Windows系统和Linux系统上运行。包含以下几个小工具，可通过选项菜单进行切换。
+一个基于pycryptodome库实现的加密解密工具箱GUI程序，支持在Windows系统和Linux系统上运行。包含以下几个小工具，可通过选项菜单进行切换。Fork from [cforth/CryptoApp](https://github.com/cforth/CryptoApp)
 
 可以选择使用AES-12B ECB模式或是CBC模式进行加密解密。
 
 ## 使用环境需要
 
 * Python
-    * Python 3.6 +
+    * Python 3.12 +
     * [pycryptodome 3.6.6 +](https://pypi.org/project/pycryptodome/#files)
     * chardet 3.0.4 +
     * Pillow 5.0.0 +
@@ -30,13 +28,18 @@
    * 支持常见图片格式（包括GIF动图）的显示，并且支持读取使用CFCrypto加密过的图片。
 
 ## 使用方法
-* Linux系统（命令行）
+```bash
+# 创建虚拟环境
+python3 -m venv .env
+# windows下激活虚拟环境
+.\.env\scripts\activate
+# 安装依赖包
+pip install -r requirements.txt
 
-    ```bash
-    python3 CryptoApp.pyw
-    ```
- 
- * Windows系统
-    
-    需要在环境变量Path中增加python安装目录路径，双击CryptoApp.pyw文件即可。
- 
+# 运行
+.\.env\Scripts\python.exe CryptoApp.pyw
+
+
+# 关闭虚拟环境
+deactivate
+```
